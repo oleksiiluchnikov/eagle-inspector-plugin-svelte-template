@@ -7,12 +7,12 @@ This is a template repository for creating plugins for [Eagle](https://en.eagle.
 - 🚀 Built with [Svelte](https://svelte.dev/) and [Vite](https://vitejs.dev/)
 - 📦 Optimized build configuration for Eagle plugins
 - 🔧 Ready-to-use development environment with hot reload
-- 📝 Well-documented template structure
+    <!-- - 📝 Well-documented template structure -->
 - 🎨 Theme-aware components that match Eagle's UI
 - 🛠️ TypeScript support out of the box
 - 📚 Comprehensive component library
-- 🧪 Testing setup with Jest
-- 🔍 ESLint and Prettier for code quality</REPLACE>
+- 🧪 Testing setup with Vitest
+- 🔍 ESLint and Prettier for code quality
 
 ## Getting Started
 
@@ -56,7 +56,25 @@ npm run build
 
 The built files will be in the `build` directory.
 
+### Testing
+
+Run tests using Vitest:
+
+```bash
+# Run tests
+npm run test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests with UI
+npm run test:ui
+
 ### Testing in Eagle
+```
 
 1. Launch Eagle application
 2. Go to Plugins -> Developer Options
@@ -75,16 +93,7 @@ This template includes TypeScript support out of the box. To use TypeScript:
 Example:
 
 ```typescript
-interface EagleImage {
-  id: string;
-  name: string;
-  url: string;
-  // ... other properties
-}
 
-function processImage(image: EagleImage): void {
-  // Your code here
-}
 ```
 
 ## Project Structure
@@ -94,19 +103,15 @@ function processImage(image: EagleImage): void {
 ├── src/
 │   ├── components/    # Reusable UI components
 │   │   ├── Button.svelte
-│   │   ├── Input.svelte
 │   │   └── ...
 │   ├── lib/          # Utility functions and helpers
-│   │   ├── api.ts    # Eagle API wrapper
-│   │   └── theme.ts  # Theme utilities
 │   ├── types/        # TypeScript type definitions
-│   │   └── eagle.d.ts
-│   ├── main.ts       # Entry point
+│   ├── main.js       # Entry point
 │   └── App.svelte    # Root component
-├── public/           # Static assets
-│   ├── logo.png
-│   └── ...
 ├── tests/           # Test files
+├── index.html       # HTML template
+├── global.css       # Global CSS styles
+├── logo.png         # Plugin logo
 ├── docs/            # Documentation
 ├── .github/         # GitHub workflows
 ├── vite.config.ts   # Vite configuration
@@ -115,11 +120,7 @@ function processImage(image: EagleImage): void {
 └── package.json     # Project configuration
 ```
 
-## Available Components
-
-This template includes several pre-built components that match Eagle's UI:
-
-- `Button.svelte` - Standard button component with proper theming
+## Available Scripts
 
 ## License
 
